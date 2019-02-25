@@ -86,13 +86,13 @@
 <meta property="og:site_name" content="素帛简墨个人足迹">
 <meta property="og:description" content="编写一个完整 App ：WanAndroid（二）搭建基础项目结构按照设计，搭建 MVP + Dagger2 的基础结构。参考 Google 官方 Demo：https://github.com/googlesamples/android-architecture 一、初步构建项目包结构如下： 二、添加 Dagger2 依赖12implementation &apos;com.google.dagger:d">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="i:/project-structure.png">
-<meta property="og:image" content="i:/project-di.png">
-<meta property="og:updated_time" content="2019-02-25T14:57:18.897Z">
+<meta property="og:image" content="http://yoursite.com/archives/19d169f2/project-structure.png">
+<meta property="og:image" content="http://yoursite.com/archives/19d169f2/project-di.png">
+<meta property="og:updated_time" content="2019-02-25T15:48:00.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编写一个完整 App ：WanAndroid（二）">
 <meta name="twitter:description" content="编写一个完整 App ：WanAndroid（二）搭建基础项目结构按照设计，搭建 MVP + Dagger2 的基础结构。参考 Google 官方 Demo：https://github.com/googlesamples/android-architecture 一、初步构建项目包结构如下： 二、添加 Dagger2 依赖12implementation &apos;com.google.dagger:d">
-<meta name="twitter:image" content="i:/project-structure.png">
+<meta name="twitter:image" content="http://yoursite.com/archives/19d169f2/project-structure.png">
 
 
 
@@ -347,7 +347,7 @@
 
       
         <h1 id="编写一个完整-App-：WanAndroid（二）"><a href="#编写一个完整-App-：WanAndroid（二）" class="headerlink" title="编写一个完整 App ：WanAndroid（二）"></a>编写一个完整 App ：WanAndroid（二）</h1><h2 id="搭建基础项目结构"><a href="#搭建基础项目结构" class="headerlink" title="搭建基础项目结构"></a>搭建基础项目结构</h2><p>按照设计，搭建 <code>MVP</code> + <code>Dagger2</code> 的基础结构。参考 Google 官方 Demo：<a href="https://github.com/googlesamples/android-architecture" target="_blank" rel="noopener">https://github.com/googlesamples/android-architecture</a></p>
-<h3 id="一、初步构建项目包结构如下："><a href="#一、初步构建项目包结构如下：" class="headerlink" title="一、初步构建项目包结构如下："></a>一、初步构建项目包结构如下：</h3><p><img src="I:\project-structure.png" alt="project-structure"></p>
+<h3 id="一、初步构建项目包结构如下："><a href="#一、初步构建项目包结构如下：" class="headerlink" title="一、初步构建项目包结构如下："></a>一、初步构建项目包结构如下：</h3><p><img src="/archives/19d169f2/project-structure.png" alt="project-structure"></p>
 <h3 id="二、添加-Dagger2-依赖"><a href="#二、添加-Dagger2-依赖" class="headerlink" title="二、添加 Dagger2 依赖"></a>二、添加 Dagger2 依赖</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">'com.google.dagger:dagger:2.21'</span></span><br><span class="line">annotationProcessor <span class="string">'com.google.dagger:dagger-compiler:2.21'</span></span><br></pre></td></tr></table></figure>
 <h3 id="三、构造基类"><a href="#三、构造基类" class="headerlink" title="三、构造基类"></a>三、构造基类</h3><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>新建 BaseContract 接口。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yuan.learnproject.base;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> yuan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/1/27</span></span><br><span class="line"><span class="comment"> **/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BaseContract</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">BaseView</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">BaseModel</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">BasePresenter</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -363,7 +363,7 @@
 <p>用 Dagger2 注解 @Inject 注入 P 层。</p>
 <p>用 ButterKnife 绑定 View 。</p>
 <h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>新建 Dagger2 注解相关的类。Component、 Module、Scope 还有 Qualifier（限定符暂时没有用到，因此没有创建。）详细的解析可以参考 <a href="https://www.jianshu.com/p/9703a931c7e7" target="_blank" rel="noopener">https://www.jianshu.com/p/9703a931c7e7</a> 。</p>
-<p><img src="I:\project-di.png" alt="project-di"></p>
+<p><img src="/archives/19d169f2/project-di.png" alt="project-di"></p>
 <p>AppComponent</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Singleton</span></span><br><span class="line"><span class="meta">@Component</span>(modules = &#123;AppModule.class&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">AppComponent</span> </span>&#123;</span><br><span class="line">    <span class="function">Application <span class="title">getApplication</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>AppModule</p>
